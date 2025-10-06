@@ -155,7 +155,7 @@ body {
     border-radius:100px 100px 0px 0px;
 }
 #contact:hover, #work:hover, #about:hover, #projects:hover  {
-	backgroud: #ffffff;
+	background: #ffffff;
 	color: #000000;
 	cursor:pointer;
 }
