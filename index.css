@@ -167,6 +167,14 @@ body {
 #middle table tr td {
     text-align:center;
 }
+.socials-main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 .socials {
     margin-top: 30px;
     display: flex;
