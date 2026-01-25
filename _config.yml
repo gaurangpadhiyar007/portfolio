@@ -1,4 +1,5 @@
-baseurl: 'https://coffeewithmagento.in/'
+url: "https://coffeewithmagento.in"
+baseurl: ''
 permalink: pretty
 title: 'Gaurang Padhiyar'
 
