@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Github",
+    "link": "https://github.com/gaurangpadhiyar007",
+    "image": "images/social/github.svg"
+  },
+  {
+      "name": "Email",
+      "link": "mailto:gaurangpadhiyar1993@gmail.com",
+      "image": "images/social/email.svg"
+  },
+  {
+      "name": "Linkedin",
+      "link": "https://www.linkedin.com/in/gaurang-padhiyar-adobe-commerce/?website=gaurangpadhiyar",
+      "image": "images/social/linkedin.svg"
+  }
+]
