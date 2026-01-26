@@ -6,6 +6,7 @@ jobtitle: "Accounting Partner"
 linkedinurl: "https://www.linkedin.com/example2"
 promoted: true
 weight: 2
+sitemap: false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
