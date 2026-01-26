@@ -40,6 +40,10 @@ plugins:
   - jekyll-environment-variables
   - jekyll-sitemap
 
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 exclude:
   - Gemfile
   - Gemfile.lock
