@@ -8,8 +8,8 @@ bodyClass: page-blog
   <div class="row justify-content-start">
     <div class="col-12 col-md-8">
       <div class="content">
-        <h1>Expert Ecommerce Insights</h1>
-        <p>Providing value to Magento and Shopify store owners in the US, Europe, and Australia.</p>
+        <h1>Blogs</h1>
+        <p>Providing value to Stakeholder to Developers, Designers and QA teams</p>
       </div>
     </div>
   </div>
