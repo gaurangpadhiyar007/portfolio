@@ -13,7 +13,7 @@ Over the years, I have helped brands across the globe—from the Australian outb
 
 ## Enterprise Magento & Adobe Commerce
 
-### [Dinga](https://www.dinga.com.au/)
+### [Dinga](https://www.dinga.com.au/){:target="_blank"}
 **Hunting & Outdoor Gear** Full-scale Magento 2 development and technical orchestration. I managed the ongoing evolution of this complex catalog to ensure stability during high-traffic seasons.
 * **Focus:** Core Development, Backend Management.
 
