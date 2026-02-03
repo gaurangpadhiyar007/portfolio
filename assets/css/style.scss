@@ -152,90 +152,68 @@ pre.highlight {
 }
 
 // Slider code
+/* --- Base Mobile Styles (Default) --- */
+.full-width-banner {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
 .custom-slider {
   position: relative;
   width: 100%;
-  max-width: 1000px;
-  margin: auto;
-  overflow: hidden;
-  height: 400px;
-  border-radius: 8px;
+  height: 300px; // Shorter for mobile
+}
 
-  .slider-container {
-    height: 100%;
+.slide-content {
+  h1 {
+    font-size: 1.5rem; // Smaller text for phones
+    padding: 0 20px;
   }
 
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f4f4f4; // Placeholder color
+  p {
+    font-size: 1rem;
+    display: none; // Hide sub-text on very small screens
+  }
+}
 
-    &.active {
-      opacity: 1;
-      z-index: 1;
+/* --- Tablet Styles (min-width: 768px) --- */
+@media (min-width: 768px) {
+  .custom-slider {
+    height: 400px;
+  }
+
+  .slide-content {
+    h1 {
+      font-size: 2.2rem;
     }
 
-    .slide-content {
-      text-align: center;
-      padding: 20px;
-    }
-  }
-
-  /* Navigation Buttons */
-  .prev,
-  .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.3);
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.8);
-    }
-  }
-
-  .prev {
-    left: 10px;
-  }
-
-  .next {
-    right: 10px;
-  }
-
-  /* Dots */
-  .dots-container {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-
-    .dot {
-      height: 12px;
-      width: 12px;
-      margin: 0 5px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-
-      &.active {
-        background-color: #717171;
-      }
+    p {
+      display: block;
     }
   }
 }
+
+/* --- Desktop Styles (min-width: 1024px) --- */
+@media (min-width: 1024px) {
+  .custom-slider {
+    height: 550px; // Tall, premium look for desktop
+  }
+
+  .slide-content {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+
+  // "Breakout" trick for wide screens
+  .full-width-banner {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+
