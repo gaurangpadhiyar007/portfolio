@@ -76,4 +76,3 @@ The Source API transforms **da.live** from a simple authoring tool into a fully 
 
 [Contact Me for Custom API Development](https://coffeewithmagento.in/contact/)
 
-```
