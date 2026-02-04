@@ -18,8 +18,9 @@ bodyClass: page-projects
     <div class="col-12 col-md-6 mb-4">
       <div class="project-card h-100">
         <div class="project-image-wrapper">
-          <img src="{{ 'images/projects/dinga.png' | relative_url }}" alt="Dinga Australia" loading="lazy" decoding="async">
-          <div class="project-overlay"><a href="https://www.dinga.com.au/" target="_blank" rel="noopener" class="btn btn-outline-light">Visit Site</a></div>
+          <a href="https://www.dinga.com.au/" target="_blank" rel="noopener">
+            <img src="{{ 'images/projects/dinga.png' | relative_url }}" alt="Dinga Australia" loading="lazy" decoding="async" />
+          </a>
         </div>
         <div class="project-info p-4">
           <div class="d-flex justify-content-between mb-2"><span class="project-category">Magento 2</span><span class="badge badge-secondary">AU</span></div>
@@ -32,8 +33,9 @@ bodyClass: page-projects
     <div class="col-12 col-md-6 mb-4">
       <div class="project-card h-100">
         <div class="project-image-wrapper">
-          <img src="{{ 'images/projects/deadwood.png' | relative_url }}" alt="Deadwood Knives" loading="lazy" decoding="async">
-          <div class="project-overlay"><a href="https://www.deadwoodknives.com/" target="_blank" rel="noopener" class="btn btn-outline-light">Visit Site</a></div>
+          <a href="https://www.deadwoodknives.com/" target="_blank" rel="noopener">
+            <img src="{{ 'images/projects/deadwood.png' | relative_url }}" alt="Deadwood Knives" loading="lazy" decoding="async">
+          </a>
         </div>
         <div class="project-info p-4">
           <div class="d-flex justify-content-between mb-2"><span class="project-category">Migration</span><span class="badge badge-secondary">US</span></div>
@@ -50,7 +52,9 @@ bodyClass: page-projects
     <div class="col-12 col-md-4 mb-4">
       <div class="project-card h-100">
         <div class="project-image-wrapper small-height">
-          <img src="{{ 'images/projects/loopify.png' | relative_url }}" alt="Loopify" loading="lazy">
+          <a href="https://loopify.world/" target="_blank" rel="noopener">
+            <img src="{{ 'images/projects/loopify.png' | relative_url }}" alt="Loopify" loading="lazy">
+          </a>
         </div>
         <div class="project-info p-4">
           <span class="project-category">Subscription</span>
@@ -62,7 +66,9 @@ bodyClass: page-projects
     <div class="col-12 col-md-4 mb-4">
       <div class="project-card h-100">
         <div class="project-image-wrapper small-height">
-          <img src="{{ 'images/projects/sougha.png' | relative_url }}" alt="Sougha Rewards" loading="lazy">
+          <a href="https://sougha.com/" target="_blank" rel="noopener">
+            <img src="{{ 'images/projects/sougha.png' | relative_url }}" alt="Sougha Rewards" loading="lazy">
+          </a>
         </div>
         <div class="project-info p-4">
           <span class="project-category">Loyalty</span>
@@ -74,7 +80,9 @@ bodyClass: page-projects
     <div class="col-12 col-md-4 mb-4">
       <div class="project-card h-100">
         <div class="project-image-wrapper small-height">
-          <img src="{{ 'images/projects/piercing.png' | relative_url }}" alt="Piercing Mania" loading="lazy">
+          <a href="https://piercingmania.com/" target="_blank" rel="noopener">
+            <img src="{{ 'images/projects/piercing.png' | relative_url }}" alt="Piercing Mania" loading="lazy">
+          </a>
         </div>
         <div class="project-info p-4">
           <span class="project-category">UX/Search</span>
@@ -90,7 +98,9 @@ bodyClass: page-projects
     <div class="col-12 col-md-4 mb-4">
       <div class="project-card h-100">
         <div class="project-image-wrapper small-height">
-          <img src="{{ 'images/projects/2xl.png' | relative_url }}" alt="2XL Home" loading="lazy">
+          <a href="https://2xlhome.com/" target="_blank" rel="noopener">
+            <img src="{{ 'images/projects/2xl.png' | relative_url }}" alt="2XL Home" loading="lazy">
+          </a>
         </div>
         <div class="project-info p-3">
           <h5>2XL Home</h5>
@@ -101,7 +111,9 @@ bodyClass: page-projects
     <div class="col-12 col-md-4 mb-4">
       <div class="project-card h-100">
         <div class="project-image-wrapper small-height">
-          <img src="{{ 'images/projects/ochome.png' | relative_url }}" alt="OC Home" loading="lazy">
+          <a href="https://ochomefurniture.com/" target="_blank" rel="noopener">
+            <img src="{{ 'images/projects/ochome.png' | relative_url }}" alt="OC Home" loading="lazy">
+          </a>
         </div>
         <div class="project-info p-3">
           <h5>OC Home Furniture</h5>
@@ -112,7 +124,9 @@ bodyClass: page-projects
     <div class="col-12 col-md-4 mb-4">
       <div class="project-card h-100">
         <div class="project-image-wrapper small-height">
-          <img src="{{ 'images/projects/ondergoed.png' | relative_url }}" alt="Ondergoed" loading="lazy">
+          <a href="https://www.ondergoed.nl/" target="_blank" rel="noopener">
+            <img src="{{ 'images/projects/ondergoed.png' | relative_url }}" alt="Ondergoed" loading="lazy">
+          </a>
         </div>
         <div class="project-info p-3">
           <h5>Ondergoed.nl</h5>
