@@ -13,6 +13,58 @@ bodyClass: page-projects
     </div>
   </div>
 
+  <h2 class="section-title mb-4">Retail & FMCG</h2>
+  <div class="row mb-5">  
+    <div class="col-12 col-md-6 mb-4">
+      <div class="project-card h-100">
+        <div class="project-image-wrapper">
+          <img src="{{ 'images/projects/grandiose.png' | relative_url }}" 
+               alt="Grandiose Supermarket - E-commerce Platform" 
+               loading="lazy" 
+               decoding="async">
+          <div class="project-overlay">
+            <a href="https://www.grandiose.ae/" target="_blank" rel="noopener" class="btn btn-outline-light">Visit Site</a>
+          </div>
+        </div>
+        <div class="project-info p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="project-category">Full-Stack Retail</span>
+            <span class="badge badge-secondary">FMCG</span>
+          </div>
+          <h3>Grandiose Supermarket</h3>
+          <p>Managed the technical orchestration for a premier grocery chain. I focused on theme engineering and mobile responsiveness to ensure a seamless "Low Price Locked" shopping experience across thousands of products.</p>
+          <div class="project-tags">
+            <span>Multi-Category UX</span><span>Performance</span><span>FMCG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-12 col-md-6 mb-4">
+      <div class="project-card h-100">
+        <div class="project-image-wrapper">
+          <img src="{{ 'images/projects/bootbox.png' | relative_url }}" 
+               alt="Bootbox Retail Solution" 
+               loading="lazy">
+          <div class="project-overlay">
+            <a href="https://bootbox.de/" target="_blank" rel="noopener" class="btn btn-outline-light">Visit Site</a>
+          </div>
+        </div>
+        <div class="project-info p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="project-category">Bespoke Retail</span>
+            <span class="badge badge-secondary">EU Market</span>
+          </div>
+          <h3>Bootbox</h3>
+          <p>Delivered bespoke theme design and full-stack engineering for this European retail brand. Balanced aesthetic appeal with the high technical performance required for modern consumer goods.</p>
+          <div class="project-tags">
+            <span>Theme Design</span><span>Full-Stack</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <h2 class="section-title mb-4">Enterprise Magento & Adobe Commerce</h2>
   <div class="row mb-5">
     <div class="col-12 col-md-6 mb-4">
