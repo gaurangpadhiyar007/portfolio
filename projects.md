@@ -1,6 +1,6 @@
 ---
 title: "Projects & Success Stories"
-layout: page
+layout: default
 description: "A selection of e-commerce platforms brewed to perfection—ranging from Magento monoliths to headless integrations."
 bodyClass: page-projects
 ---
