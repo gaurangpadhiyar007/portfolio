@@ -5,76 +5,75 @@ description: "A selection of e-commerce platforms brewed to perfection—ranging
 bodyClass: page-projects
 ---
 
-# Selected Works
+<div class="container pt-6 pb-6">
+  <div class="row">
+    <div class="col-12 text-center mb-5">
+      <h1 class="display-4 font-weight-bold">Selected Works</h1>
+      <p class="lead text-muted">A selection of e-commerce platforms brewed to perfection—from high-traffic Australian retailers to European luxury markets.</p>
+    </div>
+  </div>
 
-Over the years, I have helped brands across the globe—from the Australian outback to European luxury markets—build robust e-commerce engines. Here is a look at the digital infrastructure I’ve built and managed.
+  <h2 class="section-title mb-4">Enterprise Magento & Adobe Commerce</h2>
+  <div class="row mb-5">
+    <div class="col-12 col-md-6 mb-4">
+      <div class="project-card h-100">
+        <div class="project-image-wrapper">
+          <img src="{{ 'images/projects/dinga-com-au.png' | relative_url }}" alt="Dinga Hunting & Fishing Gear" class="img-fluid">
+          <div class="project-overlay">
+            <a href="https://www.dinga.com.au/" target="_blank" class="btn btn-outline-light">Visit Site</a>
+          </div>
+        </div>
+        <div class="project-info p-4">
+          <span class="project-category">Magento 2 Development</span>
+          <h3>Dinga Australia</h3>
+          <p>Full-scale Magento 2 development for a complex hunting and fishing catalog. Managed high-traffic scaling and stability.</p>
+          <ul class="project-tags">
+            <li>Core Dev</li>
+            <li>Backend Management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
----
+    <div class="col-12 col-md-6 mb-4">
+      <div class="project-card h-100">
+        <div class="project-image-wrapper">
+          <img src="{{ 'images/projects/deadwoodknives.png' | relative_url }}" alt="Deadwood Knives Storefront" class="img-fluid">
+          <div class="project-overlay">
+            <a href="https://www.deadwoodknives.com/" target="_blank" class="btn btn-outline-light">Visit Site</a>
+          </div>
+        </div>
+        <div class="project-info p-4">
+          <span class="project-category">Migration & Integration</span>
+          <h3>Deadwood Knives</h3>
+          <p>Lead developer for a critical Magento migration. Integrated <strong>ChannelAdvisor</strong> for advanced inventory sync.</p>
+          <ul class="project-tags">
+            <li>Inventory Sync</li>
+            <li>Marketplace Integration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-## Enterprise Magento & Adobe Commerce
+  <h2 class="section-title mb-4">Specialized E-commerce Solutions</h2>
+  <div class="row">
+    {% assign other_projects = "Loopify,Sougha Rewards,Piercing Mania,2XL Home,OC Home Furniture" | split: "," %}
+    {% for project in other_projects %}
+    <div class="col-12 col-md-4 mb-4">
+      <div class="project-card-compact p-4 h-100">
+        <h4>{{ project }}</h4>
+        <p class="small text-muted">Custom module development, UI/UX tuning, and API orchestration.</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 
-### [Dinga](https://www.dinga.com.au/){:target="_blank"}
-<img src='{{ '/assets/images/projects/dinga-com-au.png' | relative_url }}' alt="Dinga.com.au - A Fishing hunting">
-**Hunting & Outdoor Gear** Full-scale Magento 2 development and technical orchestration. I managed the ongoing evolution of this complex catalog to ensure stability during high-traffic seasons.
-* **Focus:** Core Development, Backend Management.
-
-### [Jarvis Walker](https://www.jarviswalker.com.au/){:target="_blank"}
-**Australian Fishing Tackle** A heritage brand requiring custom Magento enhancements and deep performance tuning. I focused on building bespoke features that catered to a niche sporting audience.
-* **Focus:** Performance Optimization, Custom Features.
-
-### [Deadwood Knives](https://www.deadwoodknives.com/){:target="_blank"}
-**Collector’s Knife Storefront** Lead developer for a critical Magento migration. I integrated **ChannelAdvisor** to sync complex inventory across multiple marketplaces seamlessly.
-* **Focus:** Migration, Marketplace Integration, Inventory Sync.
-
----
-
-## Specialized E-commerce Solutions
-
-### [Loopify](https://loopify.world/){:target="_blank"}
-**Subscription Travel Marketplace** A unique project involving a subscription-based model. I handled the platform build, recurring payment integrations, and specialized admin training.
-* **Focus:** Subscription Logic, Payment Gateways.
-
-### [Sougha Rewards](https://sougha.com/){:target="_blank"}
-**Loyalty & Gamification** Custom module development for a high-traffic loyalty rewards platform. This involved intricate API integrations to sync rewards across various user touchpoints.
-* **Focus:** API Orchestration, Custom Modules.
-
-### [Piercing Mania](https://piercingmania.com/){:target="_blank"}
-**Body Jewelry E-shop** Focused on the "findability" of products through custom search extension development and advanced inventory synchronization.
-* **Focus:** Search UX, Extension Development.
-
----
-
-## Home, Decor & Luxury Furniture
-
-### [2XL Home](https://2xlhome.com/){:target="_blank"} & [OC Home Furniture](https://www.ochomefurniture.com/){:target="_blank"}
-**Furniture & Interior Retailers** Managed large-scale catalogs with a focus on UI/UX enhancements. I implemented advanced filtering systems and checkout optimizations to handle high-value transactions.
-* **Focus:** UI/UX, Catalog Management, Checkout Flow.
-
-
-### [Grandiose Supermarket](https://www.grandiose.ae/){:target="_blank"} & [Bootbox](https://bootbox.de/){:target="_blank"}
-**Bespoke Furnishings** From full-stack development to bespoke theme design, these projects required a balance between high-end aesthetics and technical performance.
-* **Focus:** Theme Engineering, Mobile Responsiveness.
-
-### Bosaca
-**High-End Audio Equipment** Performance hardening and security audits for premium electronics. I ensured the site remained responsive and secure against modern vulnerabilities.
-* **Focus:** Security, Mobile Optimization.
-
----
-
-## Performance & UX Tuning
-
-### [Ondergoed](https://www.ondergoed.nl/){:target="_blank"}
-**Premium Underwear Retailer** A project centered on speed. I implemented performance tuning and filter enhancements to reduce bounce rates and improve the mobile shopping experience.
-* **Focus:** Conversion Rate Optimization (CRO), Speed.
-
----
-
-### Ready to start your project?
-Whether you need a Magento audit or a full Headless migration, let’s grab a virtual coffee and discuss your goals.
-
-[Contact Me](/contact)
-
----
-
-### Trademark Notice
-*Magento™ is a registered trademark of Adobe Inc. The projects listed above represent work performed as an independent freelance developer or as part of a development team. Coffee with Magento does not claim ownership of these brands or the Magento trademark.*
+  <div class="row mt-6">
+    <div class="col-12 text-center bg-light p-5 rounded">
+      <h2>Ready to brew your next success story?</h2>
+      <p>Whether you need a Magento audit or a full Headless migration, let's talk.</p>
+      <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-lg">Contact Me Today</a>
+    </div>
+  </div>
+</div>
