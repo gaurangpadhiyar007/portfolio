@@ -8,6 +8,29 @@ menuTrigger.onclick = function() {
     body.classList.toggle('lock-scroll')
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Target only the links inside the mobile menu that have sub-menus
+  const mobileParentLinks = document.querySelectorAll('#main-menu-mobile .has-children > a');
+
+  mobileParentLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Find the associated sub-menu (the next sibling <ul>)
+      const subMenu = this.nextElementSibling;
+
+      if (subMenu && subMenu.classList.contains('sub-menu')) {
+        // Prevent navigation so the user can see the sub-menu
+        e.preventDefault();
+        
+        // Toggle a class for the sub-menu
+        subMenu.classList.toggle('is-open');
+        
+        // Toggle a class on the parent <li> for styling (like rotating an arrow)
+        this.parentElement.classList.toggle('sub-menu-active');
+      }
+    });
+  });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.slide');
   const dots = document.querySelectorAll('.dot');

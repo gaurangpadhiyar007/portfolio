@@ -116,6 +116,59 @@ body {
     line-height: 1.3;
   }
 }
+
+/* Hide sub-menu by default */
+.sub-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 10px;
+  list-style: none;
+  z-index: 100;
+}
+
+/* Show on hover */
+.menu-item.has-children:hover .sub-menu {
+  display: block;
+}
+
+/* Style the sub-links */
+.sub-menu li a {
+  display: block;
+  padding: 5px 15px;
+  white-space: nowrap;
+  color: #333;
+}
+
+.sub-menu li a:hover {
+  color: #6a1b9a; /* Or your theme's accent color */
+}
+
+/* Ensure sub-menu is hidden initially on mobile */
+#main-menu-mobile .sub-menu {
+  display: none;
+  list-style: none;
+  padding-left: 1.5rem; /* Indent child items */
+}
+
+/* Show the sub-menu when the JS toggles the class */
+#main-menu-mobile .sub-menu.is-open {
+  display: block;
+}
+
+/* Optional: Add a simple indicator that rotates */
+#main-menu-mobile .has-children > a::after {
+  content: ' ›';
+  display: inline-block;
+  transition: transform 0.3s;
+  margin-left: 8px;
+}
+
+#main-menu-mobile .sub-menu-active > a::after {
+  transform: rotate(90deg);
+}
+
 .listing-home-intro {
     max-width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
