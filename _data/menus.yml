@@ -2,11 +2,6 @@ main:
   - name: "Services"
     url: "/services/"
     weight: 2
-    sub_menu:
-      - name: Web Design
-        link: /services/web-design/
-      - name: SEO
-        link: /services/seo/
   - name: "Projects"
     url: "/projects/"
     weight: 3
