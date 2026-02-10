@@ -4,7 +4,6 @@ title: "Is the Comment Section Killing the Content? 🧠🩹"
 date: 2026-02-10
 description: "We’re losing the ability to consume and reflect without needing to immediately react."
 image: /assets/images/attention-economy.jpg
-categories: [Digital Wellness, Psychology]
 ---
 
 We’ve developed a reflex. Before we even finish reading a post, our thumb is already hovering over the comment icon.
