@@ -182,7 +182,20 @@ bodyClass: page-projects
         </div>
         <div class="project-info p-3">
           <h5>Ondergoed.nl</h5>
-          <p class="small text-success">Speed Optimization (CRO)</p>
+          <p class="small">Speed Optimization (CRO)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-4">
+      <div class="project-card h-100">
+        <div class="project-image-wrapper small-height">
+          <a href="https://gaurangpadhiyar007.github.io/devconstruction007/" target="_blank" rel="noopener">
+            <img src="{{ 'images/projects/dev-construction.png' | relative_url }}" alt="Dev Construction" loading="lazy">
+          </a>
+        </div>
+        <div class="project-info p-3">
+          <h5>Dev Construction</h5>
+          <p class="small">UI/UX, Full Development</p>
         </div>
       </div>
     </div>
