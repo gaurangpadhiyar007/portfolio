@@ -1,0 +1,113 @@
+- name: "Model Context Protocol: Advanced Topics"
+  issuer: "Skilljar / Anthropic"
+  image: "/assets/images/certs/mcp-advanced.png"
+  url: "https://verify.skilljar.com/c/qw58pxbwxjzo"
+  skills:
+    - "Model Context Protocol"
+    - "AI Architecture"
+    - "Context Integration"
+
+- name: "Introduction to Model Context Protocol"
+  issuer: "Skilljar / Anthropic"
+  image: "/assets/images/certs/mcp-intro.png"
+  url: "https://verify.skilljar.com/c/qsahxwhitocr"
+  skills:
+    - "MCP Primitives"
+    - "LLM Tooling"
+
+- name: "Claude Code In Action"
+  issuer: "Skilljar / Anthropic"
+  image: "/assets/images/certs/claude-code.png"
+  url: "https://verify.skilljar.com/c/a8n86v9xefoq"
+  skills:
+    - "Claude Code"
+    - "Agentic AI Tools"
+    - "Developer Productivity"
+
+- name: "Adobe Certified Expert - Adobe Commerce Cloud Developer"
+  issuer: "Credly / Adobe"
+  image: "/assets/images/certs/adobe-commerce-cloud.png"
+  url: "https://www.credly.com/badges/52a7c1c1-8c7d-42a3-8d28-80b9c5970db9"
+  skills:
+    - "Adobe Commerce"
+    - "Cloud Deployment"
+    - "Magento 2 Architecture"
+
+- name: "Adobe Certified Professional - Adobe Commerce Developer"
+  issuer: "Adobe"
+  image: "/assets/images/certs/adobe-commerce-prof.png"
+  url: "http://certification.adobe.com/credential/verify/6f012928-d026-4c3c-8fcc-84a7e9a829cb"
+  skills:
+    - "Magento 2"
+    - "PHP Backend"
+    - "E-commerce Development"
+
+- name: "Adobe Certified Professional - Adobe Experience Manager Developer"
+  issuer: "Adobe"
+  image: "/assets/images/certs/aem-developer.png"
+  url: "https://certification.adobe.com/credential/verify/6b9aa895-7207-11f1-9e60-42010a400fe7"
+  skills:
+    - "AEM Sites"
+    - "OSGi Componentry"
+    - "HTL & JCR"
+
+- name: "Adobe Experience Manager Edge Delivery Services - Developer Professional"
+  issuer: "Adobe"
+  image: "/assets/images/certs/aem-edge-delivery.png"
+  url: "https://certification.adobe.com/completion/verify/5808acbf-4993-4b8b-8fcf-10d910541606"
+  skills:
+    - "Edge Delivery Services"
+    - "Performance Optimization"
+    - "Document-based Authoring"
+
+- name: "Adobe Journey Optimizer for Developers - Expert"
+  issuer: "Adobe"
+  image: "/assets/images/certs/ajo-expert.png"
+  url: "https://certification.adobe.com/completion/verify/ef7b7d12-a4bc-432a-9894-e197aa3421f1"
+  skills:
+    - "Adobe Journey Optimizer"
+    - "Real-Time CDP"
+    - "Orchestration"
+
+- name: "Adobe Journey Optimizer B2B Foundation"
+  issuer: "Adobe"
+  image: "/assets/images/certs/ajo-b2b.png"
+  url: "https://certification.adobe.com/completion/verify/95dc70de-e109-4954-83e3-0d7abb7b8251"
+  skills:
+    - "B2B Marketing Automation"
+    - "Account-Based Journeys"
+
+- name: "Generative AI Essentials: Using LLMs to Work with Data"
+  issuer: "Credly"
+  image: "/assets/images/certs/generative-ai-essentials.png"
+  url: "https://www.credly.com/badges/f6a390ec-2668-4de6-a29e-8324ae114072/public_url"
+  skills:
+    - "Generative AI"
+    - "Data Engineering"
+    - "Large Language Models"
+
+- name: "AI Fundamentals: Foundations for Understanding AI"
+  issuer: "Credly"
+  image: "/assets/images/certs/ai-fundamentals.png"
+  url: "https://www.credly.com/badges/611f33b5-5980-4b91-bab3-7dcc53125f16"
+  skills:
+    - "AI Basics"
+    - "Machine Learning Fundamentals"
+
+- name: "Node.js Course Completion"
+  issuer: "Scaler / Moonshot"
+  image: "/assets/images/certs/nodejs.png"
+  url: "https://moonshot.scaler.com/s/sl/noDzZr3Hne?_gl=1*1cpno6m*_gcl_aw*R0NMLjE3NDg4NDU4MjQuRUFJYUlRb2JDaE1JaE9MY3FZN1NqUU1Wdjk4V0JSMEd6RHhRRUFBWUFTQUFFZ0phbV9EX0J3RQ..*_gcl_au*MTY3NjUzMjQ1MS4xNzQ4ODQyNzEzLjE0MTk3Nzc5ODIuMTc0ODg0NTg1My4xNzQ4ODQyNTUy*FPAU*MTY3NjUzMjQ1MS4xNzQ4ODQyNzEz*_ga*MTc4Mzg0NDk4Ny4xNzQ4ODQyNzE0*_ga_53S71ZZG1X*czE3NDg5Mzc4MzYkbzkkZzEkdDE3NDg5NDMyMjgkajYwJGwwJGgxMTg4MzkwMjQ1"
+  skills:
+    - "Node.js"
+    - "Backend JavaScript"
+    - "REST APIs"
+
+- name: "Certificate of Knockout JS Framework"
+  issuer: "Eduonix"
+  image: "/assets/images/certs/knockoutjs.png"
+  url: "https://www.eduonix.com/certificate/27e78e4bd3"
+  skills:
+    - "Knockout.js"
+    - "MVVM Pattern"
+    - "Magento 2 Frontend"
