@@ -116,7 +116,19 @@ body {
     line-height: 1.3;
   }
 }
+/* Achievements Banner Custom Styles */
+.achievements-banner {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  overflow: hidden;
+}
 
+.achievements-banner img {
+  border-radius: 8px;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
 /* Hide sub-menu by default */
 .sub-menu {
   display: none;
