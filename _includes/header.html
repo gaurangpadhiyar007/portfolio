@@ -1,12 +1,27 @@
 <div class='header'>
   <div class="container">
     <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/India_flag-XL-anim.gif" alt="Indian Flag" class="flag-icon">
       <a href="{{ '/' | relative_url }}"><img width="{{ site.logo.desktop_width }}" height="{{ site.logo.desktop_height }}" alt="{{ site.title }}" src="{{ site.logo.desktop | relative_url }}" /></a>
     </div>
     <div class="logo-mobile">
       <a href="{{ '/' | relative_url }}"><img width="{{ site.logo.mobile_width }}" height="{{ site.logo.mobile_height }}" alt="{{ site.title }}" src="{{ site.logo.mobile | relative_url }}" /></a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/India_flag-XL-anim.gif" alt="Indian Flag" class="flag-icon-mobile">
     </div>
     {% include main-menu.html %}
     {% include hamburger.html %}
   </div>
 </div>
+<style>
+  img.flag-icon {
+    height: 30px;
+    width: auto;
+  }
+  img.flag-icon-mobile {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    margin-left: 50px;
+    top: 25px;
+  }
+</style>
