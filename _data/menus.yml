@@ -8,6 +8,10 @@ main:
   - name: "Blog"
     url: "/blog/"
     weight: 4
+    sub_menu:
+      - name: "AEM"
+        url: "/blog/aem/"
+        weight: 1
   - name: "About"
     url: "/about/"
     weight: 5
