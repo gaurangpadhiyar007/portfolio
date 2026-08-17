@@ -93,3 +93,4 @@ Create `_cq_dialog/.content.xml` in your custom component:
         </items>
     </content>
 </jcr:root>
+```
