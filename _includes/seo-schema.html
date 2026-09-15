@@ -1,41 +1,89 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Gaurang Padhiyar",
-  "url": "https://coffeewithmagento.in/",
-  "image": "https://coffeewithmagento.in/images/logo/logo.svg",
-  "areaServed": [
-    {"@type": "Country", "name": "United States"},
-    {"@type": "Country", "name": "United Kingdom"},
-    {"@type": "Country", "name": "Australia"},
-    {"@type": "Country", "name": "New Zealand"},
-    {"@type": "Country", "name": "Germany"}
-  ],
-  "description": "Expert Adobe Commerce (Magento), Laravel & Shopify developer specializing in headless commerce and performance optimization for global brands.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Ahmedabad",
-    "addressRegion": "Gujarat",
-    "addressCountry": "IN"
-  },
-  "email": "[coffeewithmagento.in@gmail.com]",
-  "telephone": "[+91-7600402814]",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "[+91-7600402814]",
-    "contactType": "customer service",
-    "availableLanguage": [
-      "English"
-    ]
-  },
-  "knowsAbout": [
-    "Magento 2",
-    "Adobe Commerce",
-    "PHP",
-    "MySQL",
-    "E-commerce Development",
-    "API Integration"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://coffeewithmagento.in/#person",
+      "name": "Gaurang Padhiyar",
+      "jobTitle": "Senior Software Engineer & Adobe Commerce Architect",
+      "url": "https://coffeewithmagento.in",
+      "email": "gaurangpadhiyar1993@gmail.com",
+      "telephone": "+91-7600402814",
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Bachelor of Engineering in Computer Engineering"
+      },
+      "knowsAbout": [
+        "Adobe Commerce",
+        "Magento 2",
+        "Adobe Experience Manager (AEM)",
+        "Headless Commerce",
+        "Core Web Vitals Optimization",
+        "AI Search Optimization (GEO/AEO)"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Adobe Commerce Certified Developer",
+          "credentialCategory": "Professional Certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "AEM Certified Developer",
+          "credentialCategory": "Professional Certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Claude Certified Architect - Foundations",
+          "credentialCategory": "AI Architecture Certification"
+        }
+      ],
+      "sameAs": [
+        "https://github.com/gaurangpadhiyar",
+        "https://linkedin.com/in/gaurangpadhiyar"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://coffeewithmagento.in/#service",
+      "name": "Coffee With Magento - Adobe Commerce Consultancy",
+      "url": "https://coffeewithmagento.in",
+      "provider": {
+        "@id": "https://coffeewithmagento.in/#person"
+      },
+      "areaServed": "Global",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Adobe Commerce & Development Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Headless & Composable Commerce Development",
+              "description": "Transition monolithic platforms to decoupled architectures for scalable performance."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Speed-as-a-Service: Core Web Vitals Optimization",
+              "description": "High-performance site speed tuning and frontend optimization for Magento storefronts."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "GEO & AEO: AI Search Optimization",
+              "description": "Optimizing eCommerce storefronts and architecture for discovery in AI search engines."
+            }
+          }
+        ]
+      }
+    }
   ]
-}        
+}
 </script>
