@@ -5,6 +5,7 @@ description: Team
 permalink: "/team/"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
+sitemap: false
 ---
 
 # Meet The Team

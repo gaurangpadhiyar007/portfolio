@@ -32,6 +32,14 @@ defaults:
       type: "team"
     values:
       layout: "team"
+  - scope:
+      path: "google4cb9030bb4b165da.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "team"
+    values:
+      sitemap: false
 
 sass:
   style: compressed # possible values: nested expanded compact compressed
@@ -55,3 +63,4 @@ exclude:
   - LICENSE.md
   - LICENSE
   - README.md
+  - google4cb9030bb4b165da.html
