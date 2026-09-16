@@ -1,5 +1,5 @@
 ---
-title: Gaurang Padhiyar - Adobe Commerce Expert
+title: Adobe Commerce & AEM Developer
 layout: home
 description: 'Specializing in custom Adobe Commerce development and high-performance PHP solutions. Build your dream eCommerce store today.'
 intro_image: "images/illustrations/pointing.svg"
