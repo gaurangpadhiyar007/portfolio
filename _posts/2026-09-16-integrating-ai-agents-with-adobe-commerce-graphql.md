@@ -1,28 +1,76 @@
 ---
 layout: post
-title: "Integrating AI Agents with Adobe Commerce GraphQL using MCP"
-date: 2026-09-16 10:00:00 -0000
-categories: [Adobe Commerce, AI, GraphQL]
-tags: [adobe-commerce, magento, ai-agents, mcp, graphql, claude]
+title: "Integrating AI Agents with Adobe Commerce GraphQL using Model Context Protocol (MCP)"
+date: 2026-09-16 10:00:00 +0530
+categories: [Adobe Commerce, AI, Model Context Protocol]
+tags: [adobe-commerce, magento-2, ai-agents, model-context-protocol, mcp, graphql, claude]
+description: "Architecting autonomous AI shopping agents using Adobe Commerce GraphQL and Model Context Protocol (MCP) servers for high-performance agentic commerce."
+seo:
+  meta_title: "Integrating AI Agents with Adobe Commerce GraphQL using MCP"
+  meta_description: "Step-by-step guide to building Model Context Protocol (MCP) servers connecting AI agents to Adobe Commerce GraphQL endpoints."
+  keywords: "Adobe Commerce GraphQL, AI Agents, Model Context Protocol, MCP Server, Magento 2 AI, ModelContextProtocol, Claude AI"
 ---
 
 The eCommerce landscape in 2026 has shifted dramatically from passive keyword searches to interactive, conversational commerce. Modern consumers no longer want to filter through dozens of faceted category attributes; they want intelligent shopping assistants that understand natural language intent, evaluate multi-variable product requirements, and perform real-time storefront actions.
 
-For enterprise merchants running **Adobe Commerce (Magento 2)**, building these capabilities requires connecting Large Language Models (LLMs) like Anthropic's Claude directly to the robust Adobe Commerce GraphQL engine.
+For enterprise merchants running **Adobe Commerce (Magento 2)**, building these capabilities requires connecting Large Language Models (LLMs) like Anthropic's Claude directly to the robust Adobe Commerce GraphQL engine using the **Model Context Protocol (`@modelcontextprotocol/sdk`)**.
 
-The magic behind this behavior is **Model Context Protocol (MCP)**.
-
-In this post, we’ll explore how MCP works, how it enables agentic commerce, and a real-world example of extending Adobe Commerce GraphQL with an AI shopping agent.
+In this post, we’ll explore how to build an MCP server that exposes deterministic tool contracts over Adobe Commerce GraphQL to create production-grade AI shopping agents.
 
 ---
 
-## What is an Agentic Middleware Layer?
+## What is an MCP Middleware Layer?
 
-An Agentic Middleware Layer is a service sitting between your AI client and Adobe Commerce (usually built as an MCP server). It tells the Large Language Model:
+An MCP Middleware Layer is a standalone service running `@modelcontextprotocol/sdk` sitting between your AI client and Adobe Commerce. It tells the Large Language Model:
 
-> *"If you don't find a specific REST endpoint, schema definition, or API tool locally, use the registered MCP tool definitions to construct structured GraphQL queries."*
+> *"Instead of generating arbitrary API requests or guessing endpoints, use these strictly typed Model Context Protocol (MCP) tool schemas to query the catalog and execute cart operations safely."*
 
-This concept underpins **safe, deterministic AI commerce integration**.
+This protocol underpins **safe, deterministic AI commerce integration**.
+
+---
+
+## Architecture & Request Flow
+
+The execution workflow connects the LLM client to your Adobe Commerce backend through the MCP protocol wrapper:
+
+1. **User Intent & Tool Selection**: The LLM matches user input against JSON schemas registered via `ListToolsRequestSchema`.
+2. **Deterministic Payload Generation**: The MCP server receives verified tool parameters via `CallToolRequestSchema` and populates pre-tested GraphQL templates.
+3. **GraphQL Execution & Response Pruning**: Adobe Commerce executes the query, and the middleware strips unneeded HTML/metadata before returning structured JSON back through the Model Context Protocol response transport.
+
+---
+
+## Step-by-Step Implementation
+
+### 1. Define the Tool Contract
+
+Create a strictly typed tool schema using `@modelcontextprotocol/sdk/types.js` under `/src/tools/searchProducts.ts`:
+
+```typescript
+import { Tool } from "@modelcontextprotocol/sdk/types.js";
+
+export const SearchProductsTool: Tool = {
+  name: "search_products",
+  description: "Search Adobe Commerce catalog by natural language keywords, SKU, or category filters via Model Context Protocol.",
+  inputSchema: {
+    type: "object",
+    properties: {
+      searchQuery: {
+        type: "string",
+        description: "The term or product description to search for (e.g., 'waterproof trail running shoes')"
+      },
+      pageSize: {
+        type: "number",
+        description: "Number of products to return (default 5)",
+        default: 5
+      },
+      currentPage: {
+        type: "number",
+        default: 1
+      }
+    },
+    required: ["searchQuery"]
+  }
+};
 
 ---
 
