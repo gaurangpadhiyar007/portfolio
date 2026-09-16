@@ -1,7 +1,7 @@
 ---
-title: Adobe Commerce & AEM Developer
+title: Adobe Commerce & AEM Architect | Claude Certified AI Developer
 layout: home
-description: 'Specializing in custom Adobe Commerce development and high-performance PHP solutions. Build your dream eCommerce store today.'
+description: 'Freelance enterprise solutions architect specializing in decoupled Adobe Commerce, AEM integrations, and AI-driven storefront optimization. Building ultra-fast, high-converting digital commerce experiences.'
 intro_image: "images/illustrations/pointing.svg"
 keywords: 'Freelance Adobe Commerce & Magento Expert'
 intro_image_absolute: true
