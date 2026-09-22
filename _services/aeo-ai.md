@@ -1,8 +1,10 @@
+---
 title: "Answer Engine Optimization (AEO) & RAG Engineering"
 date: 2026-09-22T10:00:00+05:30
 weight: 3
 featured: true
 description: "Architecting enterprise digital properties for dense vector retrieval, synthetic engine synthesis, and LLM citation dominance."
+---
 
 Transform your digital storefront from a traditional web index asset into an authoritative primary node for AI retrieval engines. We re-engineer your technical infrastructure to ensure your products and insights are directly synthesized by LLMs.
 
