@@ -12,7 +12,7 @@ main:
       - name: "CLAUDE"
         url: "/blog/claude/"
         weight: 1
-        - name: "AEM"
+      - name: "AEM"
         url: "/blog/aem/"
         weight: 2
   - name: "About"
