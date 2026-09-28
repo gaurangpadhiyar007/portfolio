@@ -9,9 +9,12 @@ main:
     url: "/blog/"
     weight: 4
     sub_menu:
-      - name: "AEM"
-        url: "/blog/aem/"
+      - name: "CLAUDE"
+        url: "/blog/claude/"
         weight: 1
+        - name: "AEM"
+        url: "/blog/aem/"
+        weight: 2
   - name: "About"
     url: "/about/"
     weight: 5
