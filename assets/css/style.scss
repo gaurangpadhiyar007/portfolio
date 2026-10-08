@@ -374,3 +374,24 @@ pre.highlight {
   font-size: 0.65rem;
   padding: 3px 6px;
 }
+/* Ensure sub-menu renders naturally inside the mobile layout */
+#main-menu-mobile .sub-menu {
+  display: none;
+  position: static; /* Overrides position: absolute */
+  background: transparent; /* Overrides white background */
+  border: none; /* Overrides border: 1px solid red */
+  box-shadow: none; /* Removes desktop shadow */
+  padding-left: 1.5rem; /* Indent child items */
+  list-style: none;
+}
+
+/* Ensure mobile sub-links are visible */
+#main-menu-mobile .sub-menu li a {
+  color: $white; /* Adjust to match your mobile menu text color */
+  padding: 8px 0;
+}
+
+/* Show the sub-menu when toggled open */
+#main-menu-mobile .sub-menu.is-open {
+  display: block;
+}
