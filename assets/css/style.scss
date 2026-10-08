@@ -1,6 +1,3 @@
----
----
-
 // Colors
 $primary: #e5261f;
 $primary-dark: #a01b16;
@@ -111,47 +108,105 @@ body {
   font-size: 16px;
   line-height: 1.2;
   font-family: $font-family-base;
+
   @include media-breakpoint-up(md) {
     font-size: 16px;
     line-height: 1.3;
   }
 }
-.listing-home-intro {
+
+/* Achievements Banner Custom Styles */
+.achievements-banner {
+  text-align: center;
+  overflow: hidden;
+
+  img {
+    border-radius: 8px;
     max-width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
-    margin-top: var(--bs-gutter-y);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
 }
 
-/* Mobile Sub-menu & Responsive Nav Block */
+/* ==========================================================================
+   Desktop Navigation Dropdown
+   ========================================================================== */
+.menu-item.has-children {
+  position: relative; /* Relative anchor so dropdown positions correctly underneath */
+
+  &:hover > .sub-menu {
+    display: block;
+  }
+}
+
+/* Scoped specifically to desktop/default sub-menus */
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  margin: 0;
+  list-style: none; /* Removes default list bullets */
+  z-index: 1000;
+  border-radius: 6px;
+  min-width: 160px;
+
+  li {
+    list-style: none; /* Disables sub-item bullet points */
+
+    a {
+      display: block;
+      padding: 8px 16px;
+      white-space: nowrap;
+      color: $primary;
+      text-decoration: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background-color: lighten($primary, 45%);
+        color: $primary-dark;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Mobile Navigation & Sub-menu Overrides
+   ========================================================================== */
 #main-menu-mobile {
-  // Mobile styles apply by default (below desktop breakpoint)
+  /* Resets desktop absolute dropdown styling for mobile flow */
   .sub-menu {
     display: none;
-    position: static; /* Overrides position: absolute */
-    background: transparent; /* Overrides white background */
-    border: none; /* Overrides border: 1px solid red */
-    box-shadow: none; /* Removes desktop shadow */
-    padding-left: 1.5rem; /* Indent child items */
+    position: static;
+    transform: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0 1.5rem;
+    margin: 0;
     list-style: none;
+    min-width: auto;
 
     li a {
-      color: $white; /* Adjust to match your mobile menu text color */
+      color: $white;
       padding: 8px 0;
       display: block;
 
       &:hover {
+        background-color: transparent;
         color: $secondary;
       }
     }
 
-    /* Show the sub-menu when toggled open via JS */
     &.is-open {
       display: block;
     }
   }
 
-  /* Indicator arrow styling */
+  /* Expand indicator arrow */
   .has-children > a::after {
     content: ' ›';
     display: inline-block;
@@ -163,14 +218,193 @@ body {
     transform: rotate(90deg);
   }
 
-  /* Responsive Media Breakpoint Overrides */
-  // Option A: Using Bootstrap's built-in breakpoint mixin
+  /* Automatically hide mobile navigation on tablet and desktop viewports */
   @include media-breakpoint-up(md) {
-    display: none; // Automatically hide mobile menu on tablet/desktop viewports
+    display: none;
+  }
+}
+
+.listing-home-intro {
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+  line-height: 2rem;
+  margin-bottom: 20px;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+    background: #e0e0e0;
+  }
+}
+
+pre.highlight {
+  position: relative;
+  padding-top: 2rem !important;
+}
+
+/* ==========================================================================
+   Banner & Slider
+   ========================================================================== */
+.full-width-banner {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+
+  @media (min-width: 1024px) {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+
+.custom-slider {
+  position: relative;
+  width: 100%;
+  height: 300px;
+
+  @media (min-width: 768px) {
+    height: 400px;
   }
 
-  // Option B: Standard CSS Media Query (if not using Bootstrap mixins)
-  @media (min-width: 768px) {
-    display: none; 
+  @media (min-width: 1024px) {
+    height: 550px;
   }
+}
+
+.slide-content {
+  h1 {
+    font-size: 1.5rem;
+    padding: 0 20px;
+
+    @media (min-width: 768px) {
+      font-size: 2.2rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 3.5rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+/* ==========================================================================
+   Project Cards
+   ========================================================================== */
+.project-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+
+  h4,
+  h5 {
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+    .project-image-wrapper img {
+      transform: scale(1.1);
+    }
+
+    .project-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+.project-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #f8f9fa;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.6s ease;
+  }
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.project-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ff4a57;
+  letter-spacing: 1px;
+}
+
+.project-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+
+  span {
+    background: #f1f3f5;
+    color: #495057;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+}
+
+.small-height {
+  height: 180px !important;
+}
+
+.badge-secondary {
+  background-color: #6c757d;
+  font-size: 0.65rem;
+  padding: 3px 6px;
 }
