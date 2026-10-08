@@ -105,268 +105,290 @@ $sub-footer-text-color: $white;
 @import "pages/page-service";
 
 body {
-  font-size: 16px;
-  line-height: 1.2;
-  font-family: $font-family-base;
-
-  @include media-breakpoint-up(md) {
-    font-size: 16px;
-    line-height: 1.3;
-  }
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: $font-family-base;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+    line-height: 1.3;
+  }
 }
-
 /* Achievements Banner Custom Styles */
 .achievements-banner {
-  text-align: center;
-  overflow: hidden;
-
-  img {
-    border-radius: 8px;
-    max-width: 100%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
+  text-align: center;
+  overflow: hidden;
 }
 
-/* Sub-menu Styles */
+.achievements-banner img {
+  border-radius: 8px;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+/* Hide sub-menu by default */
 .sub-menu {
-  display: none;
-  position: absolute;
-  background: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 5px;
-  margin-left: -5px;
-  list-style: none;
-  z-index: 100;
-  color: red;
-  border: 1px solid red;
-  border-radius: 10px;
-
-  li a {
-    display: block;
-    padding: 5px 15px;
-    white-space: nowrap;
-    color: #eb2727;
-
-    &:hover {
-      color: #6a1b9a;
-    }
-  }
+  display: none;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 5px;
+  margin-left: -5px;
+  list-style: none;
+  z-index: 100;
+  color: red;
+  border: 1px solid red;
+  border-radius: 10px 10px 10px 10px;
 }
 
+/* Show on hover */
 .menu-item.has-children:hover .sub-menu {
-  display: block;
+  display: block;
 }
 
-/* Mobile Sub-menu Styles */
-#main-menu-mobile {
-  .sub-menu {
-    display: none;
-    position: static;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding-left: 1.5rem;
-    list-style: none;
+/* Style the sub-links */
+.sub-menu li a {
+  display: block;
+  padding: 5px 15px;
+  white-space: nowrap;
+  color: #eb2727;
+}
 
-    li a {
-      color: $white;
-      padding: 8px 0;
-    }
+.sub-menu li a:hover {
+  color: #6a1b9a; /* Or your theme's accent color */
+}
 
-    &.is-open {
-      display: block;
-    }
-  }
+/* Ensure sub-menu is hidden initially on mobile */
+#main-menu-mobile .sub-menu {
+  display: none;
+  list-style: none;
+  padding-left: 1.5rem; /* Indent child items */
+}
 
-  .has-children > a::after {
-    content: ' ›';
-    display: inline-block;
-    transition: transform 0.3s;
-    margin-left: 8px;
-  }
+/* Show the sub-menu when the JS toggles the class */
+#main-menu-mobile .sub-menu.is-open {
+  display: block;
+}
 
-  .sub-menu-active > a::after {
-    transform: rotate(90deg);
-  }
+/* Optional: Add a simple indicator that rotates */
+#main-menu-mobile .has-children > a::after {
+  content: ' ›';
+  display: inline-block;
+  transition: transform 0.3s;
+  margin-left: 8px;
+}
+
+#main-menu-mobile .sub-menu-active > a::after {
+  transform: rotate(90deg);
 }
 
 .listing-home-intro {
-  max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-top: var(--bs-gutter-y);
-  line-height: 2rem;
-  margin-bottom: 20px;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+    line-height: 2rem;
+    margin-bottom: 20px;
 }
 
 .copy-code-button {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  color: #333;
-  font-size: 0.75rem;
-  padding: 4px 8px;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
 
-  &:hover {
-    opacity: 1;
-    background: #e0e0e0;
-  }
+  &:hover {
+    opacity: 1;
+    background: #e0e0e0;
+  }
 }
 
+// Ensure the code block container doesn't hide the button
 pre.highlight {
-  position: relative;
-  padding-top: 2rem !important;
+  position: relative;
+  padding-top: 2rem !important; 
 }
 
-// Slider Code
+// Slider code
+/* --- Base Mobile Styles (Default) --- */
 .full-width-banner {
-  width: 100%;
-  overflow: hidden;
-  background: #000;
-
-  @media (min-width: 1024px) {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-  }
+  width: 100%;
+  overflow: hidden;
+  background: #000;
 }
 
 .custom-slider {
-  position: relative;
-  width: 100%;
-  height: 300px;
-
-  @media (min-width: 768px) {
-    height: 400px;
-  }
-
-  @media (min-width: 1024px) {
-    height: 550px;
-  }
+  position: relative;
+  width: 100%;
+  height: 300px; // Shorter for mobile
 }
 
 .slide-content {
-  h1 {
-    font-size: 1.5rem;
-    padding: 0 20px;
+  h1 {
+    font-size: 1.5rem; // Smaller text for phones
+    padding: 0 20px;
+  }
 
-    @media (min-width: 768px) {
-      font-size: 2.2rem;
-    }
+  p {
+    font-size: 1rem;
+    display: none; // Hide sub-text on very small screens
+  }
+}
 
-    @media (min-width: 1024px) {
-      font-size: 3.5rem;
-    }
-  }
+/* --- Tablet Styles (min-width: 768px) --- */
+@media (min-width: 768px) {
+  .custom-slider {
+    height: 400px;
+  }
 
-  p {
-    font-size: 1rem;
-    display: none;
+  .slide-content {
+    h1 {
+      font-size: 2.2rem;
+    }
 
-    @media (min-width: 768px) {
-      display: block;
-    }
-  }
+    p {
+      display: block;
+    }
+  }
+}
+
+/* --- Desktop Styles (min-width: 1024px) --- */
+@media (min-width: 1024px) {
+  .custom-slider {
+    height: 550px; // Tall, premium look for desktop
+  }
+
+  .slide-content {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+
+  // "Breakout" trick for wide screens
+  .full-width-banner {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 }
 
 // Projects
+/* Project Card - Main Container */
 .project-card {
-  background: #ffffff;
-  border: 1px solid #eaeaea;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
 
-  h4,
-  h5 {
-    margin-bottom: 5px;
-    font-weight: 700;
-  }
-
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-
-    .project-image-wrapper img {
-      transform: scale(1.1);
-    }
-
-    .project-overlay {
-      opacity: 1;
-    }
-  }
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    
+    .project-image-wrapper img {
+      transform: scale(1.1);
+    }
+    .project-overlay {
+      opacity: 1;
+    }
+  }
 }
 
+/* Uniform Image Sizing Fix */
 .project-image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 280px;
-  overflow: hidden;
-  background: #f8f9fa;
+  position: relative;
+  width: 100%;
+  height: 280px; /* Force uniform height for all project images */
+  overflow: hidden;
+  background: #f8f9fa;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    transition: transform 0.6s ease;
-  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops image to fill the 280px height without stretching */
+    object-position: top center; /* Keeps logos/headers visible */
+    transition: transform 0.6s ease;
+  }
 }
 
+/* Hover Overlay */
 .project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2;
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
+/* Tags & Badges */
 .project-category {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #ff4a57;
-  letter-spacing: 1px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ff4a57;
+  letter-spacing: 1px;
 }
 
 .project-tags {
-  display: flex;
-  gap: 8px;
-  margin-top: 15px;
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
 
-  span {
-    background: #f1f3f5;
-    color: #495057;
-    font-size: 0.7rem;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-weight: 600;
-  }
+  span {
+    background: #f1f3f5;
+    color: #495057;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+}
+.small-height {
+  height: 180px !important; /* Shorter cards for secondary projects */
 }
 
-.small-height {
-  height: 180px !important;
+.project-card h4, .project-card h5 {
+  margin-bottom: 5px;
+  font-weight: 700;
 }
 
 .badge-secondary {
-  background-color: #6c757d;
-  font-size: 0.65rem;
-  padding: 3px 6px;
+  background-color: #6c757d;
+  font-size: 0.65rem;
+  padding: 3px 6px;
+}
+/* Ensure sub-menu renders naturally inside the mobile layout */
+#main-menu-mobile .sub-menu {
+  display: none;
+  position: static; /* Overrides position: absolute */
+  background: transparent; /* Overrides white background */
+  border: none; /* Overrides border: 1px solid red */
+  box-shadow: none; /* Removes desktop shadow */
+  padding-left: 1.5rem; /* Indent child items */
+  list-style: none;
+}
+
+/* Ensure mobile sub-links are visible */
+#main-menu-mobile .sub-menu li a {
+  color: $white; /* Adjust to match your mobile menu text color */
+  padding: 8px 0;
+}
+
+/* Show the sub-menu when toggled open */
+#main-menu-mobile .sub-menu.is-open {
+  display: block;
 }
