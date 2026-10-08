@@ -123,24 +123,54 @@ body {
     margin-top: var(--bs-gutter-y);
 }
 
-/* Ensure sub-menu renders naturally inside the mobile layout */
-#main-menu-mobile .sub-menu {
-  display: none;
-  position: static; /* Overrides position: absolute */
-  background: transparent; /* Overrides white background */
-  border: none; /* Overrides border: 1px solid red */
-  box-shadow: none; /* Removes desktop shadow */
-  padding-left: 1.5rem; /* Indent child items */
-  list-style: none;
-}
+/* Mobile Sub-menu & Responsive Nav Block */
+#main-menu-mobile {
+  // Mobile styles apply by default (below desktop breakpoint)
+  .sub-menu {
+    display: none;
+    position: static; /* Overrides position: absolute */
+    background: transparent; /* Overrides white background */
+    border: none; /* Overrides border: 1px solid red */
+    box-shadow: none; /* Removes desktop shadow */
+    padding-left: 1.5rem; /* Indent child items */
+    list-style: none;
 
-/* Ensure mobile sub-links are visible */
-#main-menu-mobile .sub-menu li a {
-  color: $white; /* Adjust to match your mobile menu text color */
-  padding: 8px 0;
-}
+    li a {
+      color: $white; /* Adjust to match your mobile menu text color */
+      padding: 8px 0;
+      display: block;
 
-/* Show the sub-menu when toggled open */
-#main-menu-mobile .sub-menu.is-open {
-  display: block;
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    /* Show the sub-menu when toggled open via JS */
+    &.is-open {
+      display: block;
+    }
+  }
+
+  /* Indicator arrow styling */
+  .has-children > a::after {
+    content: ' ›';
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 8px;
+  }
+
+  .sub-menu-active > a::after {
+    transform: rotate(90deg);
+  }
+
+  /* Responsive Media Breakpoint Overrides */
+  // Option A: Using Bootstrap's built-in breakpoint mixin
+  @include media-breakpoint-up(md) {
+    display: none; // Automatically hide mobile menu on tablet/desktop viewports
+  }
+
+  // Option B: Standard CSS Media Query (if not using Bootstrap mixins)
+  @media (min-width: 768px) {
+    display: none; 
+  }
 }
