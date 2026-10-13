@@ -36,14 +36,16 @@ Compresses the current session down to its most essential context automatically.
 
 ```bash
 /compact
+```
 
 Focused Compacting
 Directs Claude to compress the session while keeping a specific task or focus top-of-mind for upcoming turns.
 
 ```bash
 /compact focus on GraphQL mutation changes and checkout API refactoring
+```
 
-3. Expected Terminal Output
+### 3. Expected Terminal Output
 When you execute /compact, Claude Code processes the session history and provides a structured confirmation output.
 
 Output Example:
@@ -59,16 +61,19 @@ Context Summary:
 
 Token usage reduced from 142,500 tokens (71% of context) to 18,200 tokens (9% of context).
 --------------------------------------------------------------------------------
-4. How to Verify Success
+
+### 4. How to Verify Success
 To verify that the /compact step succeeded and optimized your workspace:
 
 Check Token Usage: Run the /cost command in your terminal session.
 
-Bash
+```bash
 /cost
+```
+
 Expected Verification: Look at the Context Window Usage %. It should reflect a significantly lower percentage compared to pre-compaction levels.
 
-5. Best Practices: When to Use /compact
+###  5. Best Practices: When to Use /compact
 After Heavy Debugging: When you've pasted large stack traces or build logs that are no longer needed.
 
 Before Switching Sub-tasks: When finishing a backend refactor and moving to frontend integration within the same session.
@@ -76,11 +81,11 @@ Before Switching Sub-tasks: When finishing a backend refactor and moving to fron
 High Token Fill: When your session reaches 60–70% of the maximum context capacity.
 
 Tip: You can also trigger compaction at any point using the keyboard shortcut Esc followed by entering /compact.
-
-
 ---
 
+```bash
 <Elicitations message="What would you like to do next?">
   <Elicitation label="Create /init command guide" query="Can you write a similar detailed guide for the Claude Code /init command?"/>
   <Elicitation label="Create keyboard shortcuts guide" query="Can you write a detailed blog post on Claude Code keyboard shortcuts?"/>
 </Elicitations>
+```
