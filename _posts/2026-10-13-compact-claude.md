@@ -2,8 +2,8 @@
 layout: post
 title: "Mastering Claude Code: Using the /compact Command to Manage Context"
 date: 2026-10-13 16:00:00 +0530
-categories: [AI, Development Tools, Claude Code]
-tags: [Claude, CLI, LLM Context, Optimization, Workflow]
+categories: [AI, Development Tools, Claude Code, claude]
+tags: [Claude CLI, claude cli, CLI, LLM Context, Optimization, Workflow]
 author: Gaurang Padhiyar
 excerpt: "Learn how to use the /compact command in Claude Code to compress your conversation history, clear token fatigue, and maintain fast, precise AI coding sessions."
 ---
