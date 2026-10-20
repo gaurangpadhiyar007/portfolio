@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Why You Should Run `claude doctor`"
+title: "Why You Should Run claude doctor"
 date: 2026-10-20 20:45:00 +0530
-categories: [claude, claude-code, developer-tools]
+categories: [blog, claude, claude-code, developer-tools]
 tags: [claude, claude-code, cli, troubleshooting, productivity]
 excerpt: "One command, a few seconds, and a clear picture of whether your Claude Code setup is healthy. Here's why `claude doctor` deserves a spot in your routine."
 ---
